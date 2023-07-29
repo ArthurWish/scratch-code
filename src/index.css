@@ -1,0 +1,454 @@
+.storypage{
+  display: flex;
+}
+.surfaceimg img {
+  position: absolute; 
+  top: 0;
+  left: 20%;  
+  width: 80%; 
+  height: 100%; 
+}
+
+
+.plotimg img {
+  position: absolute; 
+  top: 0;
+  left: 0;  
+  width: 100%; 
+  height: 100%; 
+}
+
+
+.navibar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color:#e0dbf1;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.logo{
+  width: 60%; /* adjust this based on your preference */
+  height: auto; /* keep aspect ratio */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px; /* adjust this value to increase/decrease the space */
+  align-self: auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;  /* 垂直居中 */
+  padding-left: 10%;  /* 左侧内部间距 */
+  padding-right: 10%;  /* 右侧内部间距 */
+  margin-bottom: 10%;
+}
+
+.stepcon{
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;
+}
+.custom-line {
+  border: none;  /* 移除默认边框 */
+  border-top: 3px dashed rgb(181, 157, 232);  /* 设置顶部边框，达到线条效果 */
+  width: 100%;  /* 线条宽度为容器的100%，如果需要特定宽度，可以在这里更改 */
+}
+
+.header {
+
+  
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding: 10px; /* 增加内边距 */
+  border-top-right-radius: 40px; /* 设置右上角圆角 */
+  border-bottom-right-radius: 40px; /* 设置右下角圆角 */
+  align-self: flex-start; /* 使元素紧贴左侧 */
+  width: 70%; /* 设置固定长度 */
+  height: 60px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 设置边框阴影 */
+
+}
+
+.header-icon {
+  margin-right: 10px;
+}
+
+.header-text {
+  flex-grow: 1;
+
+}
+
+.header-arrow {
+  margin-left: 10px;
+}
+
+.content-dropdown {
+  display: none; /* 默认情况下隐藏内容 */
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  align-self: flex-start; /* 使元素紧贴左侧 */
+  width: 70%; /* 设置固定长度 */
+  
+}
+
+.content-dropdown.show {
+  display:contents; /* 当添加 show 类时显示内容 */
+  /* align-items: center; */
+  
+}
+.content-list{
+  display: flex;
+  flex-direction: column;
+  max-height: 300px; /* Set this to a value that suits your layout */
+  overflow-y: auto; 
+  
+}
+
+.image-list {
+  display: flex;
+  /* margin-left: 30px; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.image-item {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  /* border: 1px solid #000; */
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.image-item.selected {
+  /* 在这里添加你需要的样式 */
+  border: 2px solid rgb(255, 185, 92);  /* 添加一个蓝色的边框 */
+  box-shadow: 0 0 10px rgba(255,185,92,0.5); /* 添加一个蓝色的阴影 */
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.add-button-icon {
+  /* margin-left: 85px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:10%;
+  margin-left: 30%;
+  
+}
+
+
+.delete-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: transparent;
+  color: red;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.board{
+  position: fixed;
+  top: 0;
+  left: 20%;
+  width: 80%;
+  height: 100%;
+  background-color: #f9f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.toolbar {
+  width: 80%;
+  height:20%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 2px solid rgba(157, 123, 224, 0.69);
+  padding: 10px;
+  transform: translateY(33%); 
+  box-shadow: 4px -4px 20px rgba(157, 123, 224, 0.25);
+  
+}
+
+.toolbutton{
+  position: relative;
+  display: flex;
+  height:50%;
+  transform: translateY(-20%); 
+ 
+}
+
+.toolbar_hidden{
+  width: 80%;
+  height:20%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 2px solid rgba(157, 123, 224, 0.69);
+  padding: 10px;
+  transform: translateY(75%); 
+  box-shadow: 4px -4px 20px rgba(157, 123, 224, 0.25);
+}
+.fold{
+  transform: translateY(-300%); 
+}
+
+.colorbar {
+  position: absolute;
+  width: 50%;
+  height: 15%;
+  bottom: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  border: 2px solid rgba(157, 123, 224, 0.69);
+  padding: 10px;
+  transform: translateY(33%); 
+  box-shadow: 7px -7px 30px rgba(157, 123, 224, 0.25);
+}
+
+.color-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 7%;
+  padding-top: 7%;
+  margin-top: -7%;
+  border: 2px solid rgba(156, 163, 163, 0.83);
+  /* 添加其他样式属性，如边框等 */
+}
+
+.color-circle{
+  display: block;
+  border: 2.5px solid rgb(255, 185, 92);
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+
+
+}
+
+.shape-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+
+.shape-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-200%); 
+  height:100%
+}
+
+.shape-menu-toggle img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.shapebar {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  bottom: 90%;
+  right: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  border: 2px solid rgba(157, 123, 224, 0.69);
+  padding: 10px;
+  box-shadow: 7px -7px 30px rgba(157, 123, 224, 0.25);
+}
+
+.float-button-list {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+
+.float-button {
+  margin-bottom: 10px;
+}
+
+.inspirationlist1{
+  position: absolute;
+  width: 50%;
+  height: 15%;
+  bottom: 75%;
+  /* right: 5%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  rgba(246, 179, 46, 0.35);
+  border-radius: 40px;
+  border: 3.16px solid rgba(255, 203, 71, 1);
+  padding: 10px;
+  box-shadow: 8.42px 8.42px 10.53px rgba(169, 169, 169, 0.26);
+}
+
+.sub-inspiration1 {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Add this */
+  border-radius: 20px; /* Adjust this to change the roundness of the corners */
+  box-shadow: 0px 4px 10px rgba(246, 179, 46, 0.3); /* Adjust this to change the shadow */
+  margin-left: 2%; /* add left margin */
+  margin-right: 2%; /* add right margin */
+}
+
+
+.sub-inspiration1 img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+.inspirationlist2{
+  position: absolute;
+  width: 50%;
+  height: 15%;
+  bottom: 75%;
+  /* right: 5%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  border-radius: 40px;
+  
+  padding: 10px;
+}
+
+.inspirationlist2 img{
+  width:85%;
+  height: 85%;
+}
+
+.audioplayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  height: 100%;           
+}
+
+
+
+/* AudioPlayer.css */
+
+.audio-player-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.audio-progress-bar {
+  width: 100%;
+}
+
+.audio-play-button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.audio-element {
+  display: none;
+}
+
+.sliderbar{
+
+  position: absolute;
+  top:20%;
+  height:50%
+}
+
+.insp_button{
+  position: absolute;
+  right:-45%
+}
+
+.circle-large {
+  width: 54px;
+  height: 54px;
+  background-color: rgba(171, 142, 230, 0.81);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-small {
+  width: 42px;
+  height: 42px;
+  background-color: rgb(233, 221, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-number {
+  font-size: 24px;
+  color: white;
+}
+
+.jump {
+  display: flex;
+  justify-content: center;
+}

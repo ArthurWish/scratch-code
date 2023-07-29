@@ -1,0 +1,140 @@
+
+
+.codehelp {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.77);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logocontainer {
+  position: absolute;
+  top: 0;
+ 
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logocontainer img:first-child {
+  margin-right: 5%;
+  margin-top: -5%
+}
+
+.voicebuttoncontainer{
+  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+  
+}
+
+.tempbutton{
+  width:60px;
+  height:60px;
+}
+
+.itemcontainer {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  overflow: auto;
+  /* background-color: aquamarine; */
+}
+
+.helpblock {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+ 
+}
+
+.audiocontainer {
+  display: flex;
+  flex-direction: row; /* makes items line up horizontally */
+  justify-content: center;
+  align-items: center;
+  width:auto;
+  margin-left: -40%;
+}
+.audioplay{
+  margin-top: 20%;
+  margin-right:5%
+}
+.answerplay {
+  display: flex;
+  flex-direction: column; /* makes items line up vertically */
+  align-items: flex-start; /* aligns items to the left */
+}
+
+.questiontitle {
+  font-size: 16px;
+  color: rgb(131, 129, 129);
+  font-weight: bold;
+}
+
+
+.codecontainer{
+  display: flex;
+  flex-direction: row; /* makes items line up horizontally */
+  justify-content: center;
+  align-items: center;
+  width:auto;
+  margin-right: -50%;
+ 
+  
+}
+
+.blockdivider {
+  stroke: rgb(204, 200, 200);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 4;
+}
+
+.blockdividerEnd {
+  fill: rgb(204, 200, 200);
+}
+
+.answerplaybox {
+  width: 142px;
+  height: 53px;
+  background-color: #ccc8c8;
+  border-radius: 34.26px;
+  display: flex;
+  align-items: center;
+}
+
+.answerwaveimage {
+  margin-left: 20px;
+}
+
+.audionumber{
+  font-size: 16px;
+  color: rgb(131, 129, 129);
+  font-weight: bold;
+  margin-left: 15px;
+}
